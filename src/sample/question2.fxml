@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="sample.Question2" style="-fx-background-color: #a7dbeb" alignment="CENTER" hgap="20" vgap="20">
+
+        <Text fx:id="question" text="Did you recycle today?" GridPane.columnIndex="1"
+              GridPane.rowIndex="0" GridPane.halignment="CENTER">
+    <font>
+        <Font name="Montserrat" size="30"/>
+    </font>
+        </Text>
+        <Button fx:id="trash" onAction="#askTrash" text="TRASH ONLY" GridPane.columnIndex="1"
+                GridPane.rowIndex="1" GridPane.halignment="CENTER" maxWidth="150" style="-fx-background-color: #0b1742" textFill="white">
+    <font>
+        <Font name="Montserrat" size="20"/>
+    </font>
+        </Button>
+        <Button fx:id="recycle" onAction="#askTrash" text="RECYCLED" GridPane.columnIndex="1"
+                GridPane.rowIndex="2" GridPane.halignment="CENTER" maxWidth="150" style="-fx-background-color: #0b1742" textFill="white">
+    <font>
+        <Font name="Montserrat" size="20"/>
+    </font>
+        </Button>
+
+
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

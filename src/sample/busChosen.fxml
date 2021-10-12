@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.BusChosen"
+            prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: lightpink"
+            hgap="100" vgap="200"
+            >
+    <VBox alignment="CENTER" prefHeight="400" prefWidth="600">
+
+
+        <Text fx:id="question2" text="HOW MANY MILES DID YOU TRAVEL?" GridPane.rowIndex="5" GridPane.columnIndex="2">
+            <font>
+                <Font name="Arial Black" size="30"/>
+            </font>
+        </Text>
+        <TextField fx:id="answer1" GridPane.rowIndex="6" GridPane.columnIndex="2" maxWidth="400">
+        <font>
+            <Font name="Arial Black" size="24.0"/>
+        </font>
+        </TextField>
+
+        <Button fx:id="submit" text="submit numbers" GridPane.rowIndex="7" GridPane.columnIndex="2" onAction="#submitNums">
+        <font>
+            <Font name="Arial Black" size="24.0"/>
+        </font>
+        </Button>
+
+    </VBox>
+
+</GridPane>

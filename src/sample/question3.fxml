@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<GridPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Question3" style="-fx-background-color: #d4c6b6" vgap="20" hgap="20"
+          alignment="CENTER">
+
+        <Text fx:id="question" text="What type of transportation did you use today?" GridPane.rowIndex="0" GridPane.columnIndex="1"
+              fill="#0b1742" wrappingWidth="400" textAlignment="CENTER">
+    <font>
+        <Font name="Montserrat" size="30"/>
+    </font>
+        </Text>
+
+        <Button fx:id="bus" text="BUS" GridPane.rowIndex="2" GridPane.columnIndex="1" onAction="#askTransportation"
+                GridPane.halignment="CENTER" maxWidth="150" style="-fx-background-color: #0b1742" textFill="white">
+    <font>
+        <Font name="Montserrat" size="20"/>
+    </font>
+        </Button>
+        <Button fx:id="car" text="CAR" GridPane.rowIndex="3" GridPane.columnIndex="1" onAction="#askTransportation"
+                GridPane.halignment="CENTER" maxWidth="150" style="-fx-background-color: #0b1742" textFill="white">
+    <font>
+        <Font name="Montserrat" size="20"/>
+    </font>
+        </Button>
+        <Button fx:id="walk" text="WALK" GridPane.rowIndex="4" GridPane.columnIndex="1" onAction="#askTransportation"
+                GridPane.halignment="CENTER" maxWidth="150" style="-fx-background-color: #0b1742" textFill="white">
+    <font>
+        <Font name="Montserrat" size="20"/>
+    </font>
+        </Button>
+
+
+
+</GridPane>

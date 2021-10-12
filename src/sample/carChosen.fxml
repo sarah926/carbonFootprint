@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<GridPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.CarChosen"
+            prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: lightpink"
+            alignment="CENTER">
+        <Text fx:id="question2" text="How many miles did you travel?" GridPane.rowIndex="5" GridPane.columnIndex="2">
+        <font>
+            <Font name="Montserrat" size="15"/>
+        </font>
+        </Text>
+        <TextField fx:id="answer1" GridPane.rowIndex="6" GridPane.columnIndex="2">
+        <font>
+            <Font name="Montserrat" size="15"/>
+        </font>
+        </TextField>
+
+        <Text fx:id="question3" text="How many miles per gallon does your car get?" GridPane.rowIndex="6" GridPane.columnIndex="2"/>
+        <TextField fx:id="answer2" GridPane.rowIndex="6" GridPane.columnIndex="2"/>
+
+        <Button fx:id="submit" text="submit numbers" GridPane.rowIndex="7" GridPane.columnIndex="2" onAction="#submitNums"/>
+
+
+</GridPane>

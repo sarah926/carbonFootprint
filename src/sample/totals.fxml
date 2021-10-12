@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="sample.Totals"
+          prefHeight="400.0" prefWidth="600.0"
+          style="-fx-background-color: turquoise">
+    <VBox alignment="CENTER" prefHeight="400" prefWidth="600">
+        <Text fx:id="total" text="estimate: " GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+        <Text fx:id="totalNum" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+
+        <Button fx:id="restart" text="restart" GridPane.rowIndex="2" GridPane.columnIndex="2" onAction="#clicked"/>
+        <Button fx:id="moreInfo" text="more info" GridPane.rowIndex="3" GridPane.columnIndex="2" onAction="#clicked"/>
+
+    </VBox>
+
+</GridPane>
