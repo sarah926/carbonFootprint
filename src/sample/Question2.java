@@ -13,7 +13,8 @@ public class Question2 {
     Button trash;
     @FXML
     Button recycle;
-
+    @FXML
+    Button back;
 
     public void askTrash(ActionEvent e) throws Exception {
 
@@ -23,12 +24,12 @@ public class Question2 {
         else{
             CarbonCalculator.setWaste(CarbonCalculator.WasteType.RECYCLE);
         }
+        Main.switchScreens("question3",trash);
 
-        Stage stage;
-        Parent root = FXMLLoader.load(getClass().getResource("question3.fxml"));
-        stage = (Stage) trash.getScene().getWindow();
-        Scene scene = new Scene(root,500,400);
-        stage.setScene(scene);
-        stage.show();
+    }
+    public void back(ActionEvent e) throws Exception{
+        if(e.getSource()==back){
+            Main.switchScreens("question1",back);
+        }
     }
 }

@@ -17,6 +17,8 @@ public class Question3 {
     Button car;
     @FXML
     Button walk;
+    @FXML
+    Button back;
 
 
     public void askTransportation(ActionEvent e) throws Exception {
@@ -24,34 +26,27 @@ public class Question3 {
         if(e.getSource()==bus){
 
             CarbonCalculator.setTransportation(CarbonCalculator.TransportationType.BUS);
-            Stage stage;
-            Parent root = FXMLLoader.load(getClass().getResource("busChosen.fxml"));
-            stage = (Stage) bus.getScene().getWindow();
-            Scene scene = new Scene(root,500,400);
-            stage.setScene(scene);
-            stage.show();
+            Main.switchScreens("busChosen",bus);
+
         }
         else if(e.getSource()==car){
 
             CarbonCalculator.setTransportation(CarbonCalculator.TransportationType.CAR);
-            Stage stage;
-            Parent root = FXMLLoader.load(getClass().getResource("carChosen.fxml"));
-            stage = (Stage) bus.getScene().getWindow();
-            Scene scene = new Scene(root,500,400);
-            stage.setScene(scene);
-            stage.show();
+            Main.switchScreens("carChosen",car);
+
         }
         else{
             CarbonCalculator.setTransportation(CarbonCalculator.TransportationType.WALK);
-            Stage stage;
-            Parent root = FXMLLoader.load(getClass().getResource("totals.fxml"));
-            stage = (Stage) bus.getScene().getWindow();
-            Scene scene = new Scene(root,500,400);
-            stage.setScene(scene);
-            stage.show();
+            Main.switchScreens("totals",walk);
+
         }
 
 
+    }
+    public void back(ActionEvent e) throws Exception{
+        if(e.getSource()==back){
+            Main.switchScreens("question2",back);
+        }
     }
 
 

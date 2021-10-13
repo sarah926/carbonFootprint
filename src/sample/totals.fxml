@@ -7,17 +7,42 @@
 <?import javafx.scene.layout.*?>
 
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
 <GridPane xmlns="http://javafx.com/javafx"
           xmlns:fx="http://javafx.com/fxml"
           fx:controller="sample.Totals"
           prefHeight="400.0" prefWidth="600.0"
           style="-fx-background-color: turquoise">
-    <VBox alignment="CENTER" prefHeight="400" prefWidth="600">
-        <Text fx:id="total" text="estimate: " GridPane.rowIndex="1" GridPane.columnIndex="2"/>
-        <Text fx:id="totalNum" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+    <VBox alignment="CENTER" prefHeight="400" prefWidth="600" spacing="20">
+        <Text fx:id="total" text="estimate: " GridPane.rowIndex="1" GridPane.columnIndex="2" fill="#0b1742">
+        <font>
+            <Font name="Montserrat" size="30"/>
+        </font>
+        </Text>
+        <Text fx:id="totalNum" GridPane.rowIndex="2" GridPane.columnIndex="2" fill="#0b1742">
+        <font>
+            <Font name="Montserrat" size="30"/>
+        </font>
+        </Text>
 
-        <Button fx:id="restart" text="restart" GridPane.rowIndex="2" GridPane.columnIndex="2" onAction="#clicked"/>
-        <Button fx:id="moreInfo" text="more info" GridPane.rowIndex="3" GridPane.columnIndex="2" onAction="#clicked"/>
+        <Button fx:id="restart" text="restart" GridPane.rowIndex="2" GridPane.columnIndex="2" onAction="#clicked"
+                maxWidth="150" style="-fx-background-color: #0b1742" textFill="white">
+        <font>
+            <Font name="Montserrat" size="20"/>
+        </font>
+        </Button>
+        <Button fx:id="moreInfo" text="more info" GridPane.rowIndex="3" GridPane.columnIndex="2" onAction="#clicked"
+                maxWidth="150" style="-fx-background-color: #0b1742" textFill="white">
+        <font>
+            <Font name="Montserrat" size="20"/>
+        </font>
+        </Button>
+        <Button fx:id="back" text="back" alignment="BOTTOM_LEFT" GridPane.valignment="BOTTOM"
+                GridPane.columnIndex="0" onAction="#back" style="-fx-background-color: #0b1742" textFill="white">
+            <font>
+                <Font name="Montserrat" size="15" />
+            </font>
+        </Button>
 
     </VBox>
 

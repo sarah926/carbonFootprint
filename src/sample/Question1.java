@@ -2,11 +2,16 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
+import javafx.scene.Group;
+import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
+import javafx.scene.shape.Line;
+import javafx.scene.shape.LineTo;
+import javafx.scene.shape.MoveTo;
+import javafx.scene.shape.Path;
+
+import javafx.scene.paint.Color;
 
 public class Question1 extends Parent {
     @FXML
@@ -15,10 +20,15 @@ public class Question1 extends Parent {
     Button vegetarian;
     @FXML
     Button meat;
+    @FXML
+    Button back;
 
-
+    @FXML
+    public void initialize() throws Exception {
+        
+    }
     public void askDiet(ActionEvent e) throws Exception {
-        Eat d = new Eat();
+
        if(e.getSource()==vegan){
            CarbonCalculator.setDiet(CarbonCalculator.DietType.VEGAN);
        }
@@ -29,15 +39,16 @@ public class Question1 extends Parent {
            CarbonCalculator.setDiet(CarbonCalculator.DietType.MEAT);
        }
 
-        Stage stage;
+       Main.switchScreens("question2",vegan);
 
-        Parent root = FXMLLoader.load(getClass().getResource("question2.fxml"));
-
-        stage = (Stage) vegan.getScene().getWindow();
-        Scene scene = new Scene(root,500,400);
-        stage.setScene(scene);
-        stage.show();
     }
+    public void back(ActionEvent e) throws Exception{
+        if(e.getSource()==back){
+            Main.switchScreens("startScreen",back);
+        }
+    }
+
+
 
 
 }

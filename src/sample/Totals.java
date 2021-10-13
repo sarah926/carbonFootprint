@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
@@ -17,6 +18,8 @@ public class Totals {
     Button restart;
     @FXML
     Button moreInfo;
+    @FXML
+    Button back;
 
     public Totals(){
 
@@ -34,15 +37,16 @@ public class Totals {
 
     public void clicked(ActionEvent e) throws Exception{
         if(e.getSource() == restart){
-            Stage stage;
-            Parent root = FXMLLoader.load(getClass().getResource("startScreen.fxml"));
-            stage = (Stage) restart.getScene().getWindow();
-            Scene scene = new Scene(root,500,400);
-            stage.setScene(scene);
-            stage.show();
+            Main.switchScreens("startScreen",restart);
         }
         else if(e.getSource() == moreInfo){
 
         }
     }
+    public void back(ActionEvent e) throws Exception{
+        if(e.getSource()==back){
+            Main.switchScreens("question3",back);
+        }
+    }
+
 }

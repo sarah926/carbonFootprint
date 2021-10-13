@@ -6,21 +6,33 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <GridPane fx:controller="sample.StartScreen"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="20" vgap="20" style="-fx-background-color: #fcd2fa">
-    <VBox alignment="CENTER" prefHeight="400" prefWidth="600" spacing="20">
+          xmlns:fx="http://javafx.com/fxml"
+          prefWidth="600" prefHeight="400"
+          alignment="center" hgap="20" vgap="20" style="-fx-background-color: #fcd2fa">
+
         <Label fx:id="numTranspo" alignment="CENTER" text="Calculate your carbon footprint for today!" wrapText="true"
-               textAlignment="CENTER" maxWidth="400" textFill="#0b1742">
+               textAlignment="CENTER" maxWidth="400" textFill="#0b1742" GridPane.rowIndex="0" GridPane.columnIndex="0">
         <font>
-               <Font name="Montserrat" size="45"/>
+               <Font name="Montserrat" size="30"/>
         </font>
         </Label>
 
-        <Button fx:id="startGame" alignment="CENTER" text="start" onAction="#started" maxWidth="200">
+        <Button fx:id="startGame" alignment="CENTER" text="START" onAction="#started" maxWidth="150"
+                style="-fx-background-color: #0b1742" textFill="white" GridPane.rowIndex="1"
+                GridPane.columnIndex="0" GridPane.halignment="CENTER">
         <font>
             <Font name="Montserrat" size="20"/>
         </font>
         </Button>
 
+        <Label fx:id="source" alignment="CENTER" text="Data from epa.gov carbon footprint calculator." wrapText="true"
+               textAlignment="CENTER" maxWidth="400" textFill="#0b1742" GridPane.rowIndex="4" GridPane.columnIndex="0">
+            <font>
+                <Font name="Montserrat" size="10"/>
+            </font>
+        </Label>
 
-    </VBox>
+
+
+
 </GridPane>

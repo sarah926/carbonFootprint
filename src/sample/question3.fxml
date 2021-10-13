@@ -37,6 +37,13 @@
         <Font name="Montserrat" size="20"/>
     </font>
         </Button>
+    <Button fx:id="back" text="back" alignment="BOTTOM_LEFT" GridPane.valignment="BOTTOM"
+            GridPane.columnIndex="0" onAction="#back" style="-fx-background-color: #0b1742" textFill="white">
+        <font>
+            <Font name="Montserrat" size="15" />
+        </font>
+    </Button>
+
 
 
 

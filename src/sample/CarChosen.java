@@ -19,6 +19,8 @@ public class CarChosen {
     TextField answer2;
     @FXML
     Button submit;
+    @FXML
+    Button back;
 
 
 
@@ -27,14 +29,14 @@ public class CarChosen {
 
             CarbonCalculator.setMiles(parseInt(answer1.getText()));
             CarbonCalculator.setMPG(parseInt(answer2.getText()));
+            Main.switchScreens("totals",submit);
 
-            Stage stage;
-            Parent root = FXMLLoader.load(getClass().getResource("totals.fxml"));
-            stage = (Stage) submit.getScene().getWindow();
-            Scene scene = new Scene(root,500,400);
-            stage.setScene(scene);
-            stage.show();
         }
 
+    }
+    public void back(ActionEvent e) throws Exception{
+        if(e.getSource()==back){
+            Main.switchScreens("question3",back);
+        }
     }
 }

@@ -12,23 +12,41 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="sample.CarChosen"
             prefHeight="400.0" prefWidth="600.0"
-            style="-fx-background-color: lightpink"
-            alignment="CENTER">
-        <Text fx:id="question2" text="How many miles did you travel?" GridPane.rowIndex="5" GridPane.columnIndex="2">
+            style="-fx-background-color: #fdffcc"
+            alignment="CENTER" vgap="20">
+        <Text fx:id="question2" text="How many miles did you travel?" GridPane.rowIndex="0"
+              GridPane.columnIndex="2" GridPane.halignment="CENTER" fill="#0b1742" wrappingWidth="400">
         <font>
-            <Font name="Montserrat" size="15"/>
+            <Font name="Montserrat" size="30"/>
         </font>
         </Text>
-        <TextField fx:id="answer1" GridPane.rowIndex="6" GridPane.columnIndex="2">
+        <TextField fx:id="answer1" GridPane.rowIndex="1" GridPane.columnIndex="2" maxWidth="400" GridPane.halignment="CENTER">
         <font>
             <Font name="Montserrat" size="15"/>
         </font>
         </TextField>
 
-        <Text fx:id="question3" text="How many miles per gallon does your car get?" GridPane.rowIndex="6" GridPane.columnIndex="2"/>
-        <TextField fx:id="answer2" GridPane.rowIndex="6" GridPane.columnIndex="2"/>
+        <Text fx:id="question3" text="How many miles per gallon does your car get?" GridPane.rowIndex="2"
+              GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" fill="#0b1742"
+              wrappingWidth="400" textAlignment="CENTER">
+        <font>
+                <Font name="Montserrat" size="30"/>
+        </font>
+        </Text>
+        <TextField fx:id="answer2" GridPane.rowIndex="3" GridPane.columnIndex="2" maxWidth="400" GridPane.halignment="CENTER"/>
 
-        <Button fx:id="submit" text="submit numbers" GridPane.rowIndex="7" GridPane.columnIndex="2" onAction="#submitNums"/>
+        <Button fx:id="submit" text="SUBMIT" GridPane.rowIndex="4" GridPane.columnIndex="2"
+                onAction="#submitNums" style="-fx-background-color: #0b1742" textFill="white" maxWidth="150" GridPane.halignment="CENTER">
+        <font>
+                <Font name="Montserrat" size="20"/>
+        </font>
+        </Button>
+        <Button fx:id="back" text="back" alignment="BOTTOM_LEFT" GridPane.valignment="BOTTOM"
+                GridPane.columnIndex="0" onAction="#back" style="-fx-background-color: #0b1742" textFill="white">
+                <font>
+                        <Font name="Montserrat" size="15" />
+                </font>
+        </Button>
 
 
 </GridPane>
