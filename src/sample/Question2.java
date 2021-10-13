@@ -2,34 +2,34 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 
-public class Question2 {
+public class Question2 implements QuestionScreen {
     @FXML
     Button trash;
     @FXML
     Button recycle;
     @FXML
     Button back;
+    @FXML
+    ImageView imageView;
 
-    public void askTrash(ActionEvent e) throws Exception {
+    public void ask(ActionEvent e) throws Exception {
 
-        if(e.getSource()==trash){
+        if (e.getSource() == trash) {
             CarbonCalculator.setWaste(CarbonCalculator.WasteType.TRASH);
-        }
-        else{
+        } else {
             CarbonCalculator.setWaste(CarbonCalculator.WasteType.RECYCLE);
         }
-        Main.switchScreens("question3",trash);
+        Main.switchScreens("question3", trash);
 
     }
-    public void back(ActionEvent e) throws Exception{
-        if(e.getSource()==back){
-            Main.switchScreens("question1",back);
+
+    public void back(MouseEvent e) throws Exception {
+        if (e.getSource() == imageView) {
+            Main.switchScreens("question1", trash);
         }
     }
 }

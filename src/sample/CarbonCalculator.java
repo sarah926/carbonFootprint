@@ -1,20 +1,21 @@
 package sample;
 
-import javafx.scene.Parent;
-
 public class CarbonCalculator {
 
     static Double currentCarbon;
-    enum WasteType{
+
+    enum WasteType {
         TRASH,
         RECYCLE
     }
-    enum DietType{
+
+    enum DietType {
         VEGAN,
         VEGETARIAN,
         MEAT
     }
-    enum TransportationType{
+
+    enum TransportationType {
         BUS,
         CAR,
         WALK
@@ -36,83 +37,84 @@ public class CarbonCalculator {
         CarbonCalculator.currentCarbon += carbon;
     }
 
-    static void setDiet(DietType d){
-        if(d== DietType.VEGAN){
-            dietCarbon=calcVegan();
-        }
-        else if(d == DietType.VEGETARIAN){
-            dietCarbon=calcVegetarian();
-        }
-        else{
-            dietCarbon=calcCarnivore();
+    static void setDiet(DietType d) {
+        if (d == DietType.VEGAN) {
+            dietCarbon = calcVegan();
+        } else if (d == DietType.VEGETARIAN) {
+            dietCarbon = calcVegetarian();
+        } else {
+            dietCarbon = calcCarnivore();
         }
     }
-    static void setWaste(WasteType w){
-        if(w == WasteType.RECYCLE){
-            wasteCarbon=calcRecycle();
-        }
-        else{
-            wasteCarbon=calcTrash();
+
+    static void setWaste(WasteType w) {
+        if (w == WasteType.RECYCLE) {
+            wasteCarbon = calcRecycle();
+        } else {
+            wasteCarbon = calcTrash();
         }
     }
-    static void setTransportation(TransportationType t){
+
+    static void setTransportation(TransportationType t) {
         CarbonCalculator.transportationType = t;
     }
-    static void calcTransportation(){
-        if(CarbonCalculator.transportationType == TransportationType.BUS){
+
+    static void calcTransportation() {
+        if (CarbonCalculator.transportationType == TransportationType.BUS) {
             transportationCarbon = calcBus(miles);
-        }
-        else if(CarbonCalculator.transportationType == TransportationType.CAR){
-            transportationCarbon = calcCar(miles,mpg);
-        }
-        else{
+        } else if (CarbonCalculator.transportationType == TransportationType.CAR) {
+            transportationCarbon = calcCar(miles, mpg);
+        } else {
             transportationCarbon = calcWalk();
         }
     }
 
     //diet calculations
-    public static double calcCarnivore(){
+    public static double calcCarnivore() {
         return 6212;
     }
-    public static double calcVegetarian(){
+
+    public static double calcVegetarian() {
         return 4224;
     }
-    public static double calcVegan(){
+
+    public static double calcVegan() {
         return 3727;
     }
 
     //waste calculations
-    public static double calcTrash(){
+    public static double calcTrash() {
         double waste = 860;
         System.out.println(waste);
         return waste;
     }
-    public static double calcRecycle(){
+
+    public static double calcRecycle() {
         double waste = 498;
         System.out.println(waste);
         return waste;
     }
 
     //transportation calculations
-    static void setMiles(double m){
+    static void setMiles(double m) {
         miles = m;
     }
-    static void setMPG(double mpgs){
+
+    static void setMPG(double mpgs) {
         mpg = mpgs;
     }
 
-    public static double calcCar(double miles, double efficiency){
+    public static double calcCar(double miles, double efficiency) {
         double carbonCar = miles / efficiency;
         carbonCar = carbonCar * 8887;
         return carbonCar;
     }
 
-    public static double calcBus(double miles){
-        double carbonBus = miles * 100;
-        return carbonBus;
+    public static double calcBus(double miles) {
+        return miles * 100;
     }
 
-    public static double calcWalk(){
+    public static double calcWalk() {
         return 0;
     }
 

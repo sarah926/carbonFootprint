@@ -2,15 +2,11 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 
-import static java.lang.Integer.parseInt;
-
-public class Question3 {
+public class Question3 implements QuestionScreen {
     @FXML
     Button bus;
     @FXML
@@ -19,36 +15,36 @@ public class Question3 {
     Button walk;
     @FXML
     Button back;
+    @FXML
+    ImageView imageView;
 
 
-    public void askTransportation(ActionEvent e) throws Exception {
+    public void ask(ActionEvent e) throws Exception {
 
-        if(e.getSource()==bus){
+        if (e.getSource() == bus) {
 
             CarbonCalculator.setTransportation(CarbonCalculator.TransportationType.BUS);
-            Main.switchScreens("busChosen",bus);
+            Main.switchScreens("busChosen", bus);
 
-        }
-        else if(e.getSource()==car){
+        } else if (e.getSource() == car) {
 
             CarbonCalculator.setTransportation(CarbonCalculator.TransportationType.CAR);
-            Main.switchScreens("carChosen",car);
+            Main.switchScreens("carChosen", car);
 
-        }
-        else{
+        } else {
             CarbonCalculator.setTransportation(CarbonCalculator.TransportationType.WALK);
-            Main.switchScreens("totals",walk);
+            Main.switchScreens("totals", walk);
 
         }
 
 
     }
-    public void back(ActionEvent e) throws Exception{
-        if(e.getSource()==back){
-            Main.switchScreens("question2",back);
+
+    public void back(MouseEvent e) throws Exception {
+        if (e.getSource() == imageView) {
+            Main.switchScreens("question2", walk);
         }
     }
-
 
 
 }

@@ -13,16 +13,16 @@ public class StartScreen {
     Button startGame;
 
 
-    public void started(ActionEvent event) throws Exception{
+    public void started(ActionEvent event) throws Exception {
         Stage stage;
 
         Parent root = FXMLLoader.load(getClass().getResource("question1.fxml"));
 
-        if(event.getSource()== startGame){
+        if (event.getSource() == startGame) {
 
             System.out.println("clicked");
             stage = (Stage) startGame.getScene().getWindow();
-            Scene scene = new Scene(root,500,400);
+            Scene scene = new Scene(root, 500, 400);
             stage.setScene(scene);
             stage.show();
         }
