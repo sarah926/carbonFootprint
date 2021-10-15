@@ -31,9 +31,9 @@ public class Question3 implements QuestionScreen {
             CarbonCalculator.setTransportation(CarbonCalculator.TransportationType.CAR);
             Main.switchScreens("carChosen", car);
 
-        } else {
+        } else if(e.getSource() == walk){
             CarbonCalculator.setTransportation(CarbonCalculator.TransportationType.WALK);
-            Main.switchScreens("totals", walk);
+            Main.switchScreens("question4", walk);
 
         }
 

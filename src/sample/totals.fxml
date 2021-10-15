@@ -26,16 +26,27 @@
         <Button fx:id="restart" text="RESTART" GridPane.rowIndex="2" GridPane.columnIndex="2" onAction="#clicked"
                 maxWidth="150" style="-fx-background-color: #0b1742" textFill="white">
             <font>
-                <Font name="Montserrat" size="20"/>
+                <Font name="Montserrat" size="25"/>
             </font>
         </Button>
-        <Button fx:id="moreInfo" text="MORE INFO" GridPane.rowIndex="3" GridPane.columnIndex="2" onAction="#clicked"
-                maxWidth="150" style="-fx-background-color: #0b1742" textFill="white">
+        <Button fx:id="moreInfo" text="MORE INFO"  onAction="#clicked"
+                maxWidth="150" style="-fx-background-color: #0b1742" GridPane.columnIndex="0" GridPane.rowIndex="6" textFill="white"
+                textAlignment="CENTER">
             <font>
                 <Font name="Montserrat" size="20"/>
             </font>
         </Button>
+        <Button fx:id="how" text="HOW WAS THIS CALCULATED?" GridPane.columnIndex="0" GridPane.rowIndex="9" onAction="#clicked"
+                maxWidth="150" style="-fx-background-color: #0b1742" textFill="white">
+            <font>
+                <Font name="Montserrat" size="9"/>
+            </font>
+        </Button>
+
     </VBox>
+
+
+
     <ImageView
             fx:id="imageView"
             fitHeight="35.0"

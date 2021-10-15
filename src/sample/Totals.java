@@ -25,11 +25,12 @@ public class Totals {
 
     @FXML
     private void initialize() {
-        calc(CarbonCalculator.dietCarbon, CarbonCalculator.wasteCarbon, CarbonCalculator.transportationCarbon);
+        calc(CarbonCalculator.dietCarbon, CarbonCalculator.wasteCarbon, CarbonCalculator.transportationCarbon,
+                CarbonCalculator.electricityCarbon,CarbonCalculator.naturalGasCarbon,CarbonCalculator.fuelOilCarbon, CarbonCalculator.propaneCarbon);
     }
 
-    public double calc(double eat, double waste, double transport) {
-        double carbon = eat + waste + transport;
+    public double calc(double eat, double waste, double transport, double electric, double natural, double fuel, double propane) {
+        double carbon = eat + waste + transport + electric + natural + fuel + propane;
         totalNum.setText(carbon + " kg of CO2");
         System.out.println(carbon);
         return carbon;

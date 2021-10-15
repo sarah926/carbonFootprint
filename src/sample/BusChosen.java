@@ -27,7 +27,7 @@ public class BusChosen {
         if (e.getSource() == submit) {
             CarbonCalculator.setMiles(parseInt(answer1.getText()));
             CarbonCalculator.calcTransportation();
-            Main.switchScreens("totals", submit);
+            Main.switchScreens("question4", submit);
         }
     }
 

@@ -27,7 +27,7 @@ public class CarChosen {
 
             CarbonCalculator.setMiles(parseInt(answer1.getText()));
             CarbonCalculator.setMPG(parseInt(answer2.getText()));
-            Main.switchScreens("totals", submit);
+            Main.switchScreens("question4", submit);
             CarbonCalculator.calcTransportation();
 
         }

@@ -20,14 +20,41 @@ public class CarbonCalculator {
         CAR,
         WALK
     }
+    enum ElectricityType{
+        YES,
+        LESS,
+        NO
+    }
+    enum NaturalGasType{
+        YES,
+        LESS,
+        NO
+    }
+    enum FuelOilType{
+        YES,
+        LESS,
+        NO
+    }
+    enum PropaneType{
+        YES,
+        LESS,
+        NO
+    }
 
-
+    static ElectricityType electricityType;
     static TransportationType transportationType;
+    static NaturalGasType naturalGasType;
+    static FuelOilType fuelOilType;
+    static PropaneType propaneType;
     static double miles;
     static double mpg;
     static double dietCarbon;
     static double transportationCarbon;
     static double wasteCarbon;
+    static double electricityCarbon;
+    static double fuelOilCarbon;
+    static double propaneCarbon;
+    static double naturalGasCarbon;
 
     static void init() {
         CarbonCalculator.currentCarbon = 0.0;
@@ -55,9 +82,58 @@ public class CarbonCalculator {
         }
     }
 
+
     static void setTransportation(TransportationType t) {
         CarbonCalculator.transportationType = t;
     }
+
+    static void setElectricityType(ElectricityType e){
+        if(e==ElectricityType.YES){
+            electricityCarbon = 6779;
+        }
+        else if(e == ElectricityType.LESS){
+            electricityCarbon = 3389.5;
+        }
+        else{
+            electricityCarbon = 0;
+        }
+    }
+
+    static void setNaturalGasType(NaturalGasType n){
+            if(n==NaturalGasType.YES){
+                naturalGasCarbon = 3817;
+            }
+            else if(n == NaturalGasType.LESS){
+                naturalGasCarbon = 1908.5;
+            }
+            else{
+                naturalGasCarbon = 0;
+            }
+    }
+    static void setFuelOilType(FuelOilType f){
+       if( f == FuelOilType.YES){
+           fuelOilCarbon = 6024;
+       }
+       else if ( f == FuelOilType.LESS){
+           fuelOilCarbon = 3012;
+       }
+       else{
+           fuelOilCarbon = 0;
+       }
+    }
+
+    static void setPropaneType(PropaneType p){
+       if(p == PropaneType.YES){
+           propaneCarbon = 2787;
+       }
+       else if(p == PropaneType.LESS){
+           propaneCarbon =  1393.5;
+       }
+       else{
+           propaneCarbon = 0;
+       }
+    }
+
 
     static void calcTransportation() {
         if (CarbonCalculator.transportationType == TransportationType.BUS) {
